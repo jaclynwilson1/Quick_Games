@@ -1,5 +1,9 @@
 import time
 
+#To Do: sort by priority, date created, due date. Make as dictionary or other format. Use a pickle module to save
+#and load taasks to the file
+# CLI using argparse library
+
 def show_menu():
     print("Select option:")
     print("[1] Display To Do List")
