@@ -1,4 +1,5 @@
 import random
+import time
 
 posible_nums = list(range(1, 101))
 continue_playing = True
@@ -10,10 +11,10 @@ start = input("Do you have one?")
 while continue_playing == True:
     guess = int(random.choice(posible_nums))
     if int(guess) in guessed_numbers:
-        print("Already guessed")
         continue
     else:
         print("I think " + str(guess) + " is your number.")
+        time.sleep(1)
         ans = input("Is it your number? [y/n]")
         if ans == "y":
             print("Yay!")
