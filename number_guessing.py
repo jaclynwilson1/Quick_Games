@@ -14,16 +14,15 @@ while continue_playing == True:
         continue
     else:
         print("I think " + str(guess) + " is your number.")
-        ans = input("Is it your number?")
+        ans = input("Is it your number? [y/n]")
         if ans == "y":
             print("Yay!")
             continue_playing = False
         else:
             guessed_numbers.append(guess)
-            higher = input("Is your number higher?")
+            higher = input("Is your number higher? [y/n]")
             if higher == "y":
                 posible_nums = list(range(guess, posible_nums[-1]+1))
             else:
-                lower = input("Is your number lower?")
-                if lower == "y":
-                    posible_nums = list(range(posible_nums[0], guess + 1))
+                print("Your number must be lower...")
+                posible_nums = list(range(posible_nums[0], guess + 1))
