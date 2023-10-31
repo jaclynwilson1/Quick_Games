@@ -1,6 +1,8 @@
 import random
 import time
 
+#To-Do: Clean up game and make it interactive
+
 posible_nums = list(range(1, 101))
 continue_playing = True
 guessed_numbers = []
@@ -28,7 +30,7 @@ while continue_playing == True:
         else:
             guessed_numbers.append(guess)
             higher = input("Is your number higher? [y/n]")
-            
+
             if higher == "y":
                 posible_nums = list(range(guess, posible_nums[-1]+1))
 
