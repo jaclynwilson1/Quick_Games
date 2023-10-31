@@ -19,10 +19,16 @@ while keep_going == True:
         keep_going = False
     
     if option == "1":
-        print (list)
+        print(to_do)
+        time.sleep(2)
 
     if option == "2":
         print("Adding to list")
+        item = input("Insert item to add to To Do List:")
+        to_do.append(item)
         
+        print(*to_do, sep="\n")
+        time.sleep(2)
+
     if option == "3":
         print("Removing from list")
